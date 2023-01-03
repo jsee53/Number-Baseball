@@ -1,0 +1,89 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="NumberBaseball.css" />
+    <title>숫자야구</title>
+  </head>
+  <body>
+    <div class="title"><span class="gradtext">숫자야구</span></div>
+    <div class="gameStartBox">
+      <button class="gameStart" id="startButton" onclick="view()">Start</button>
+    </div>
+    <div id="displayGame" style="display: none">
+      <span>
+        <table class="gameTable" id="gameTable">
+          <tr>
+            <td colspan="3">SCORE</td>
+          </tr>
+          <tr>
+            <td>1회</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2회</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3회</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4회</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>5회</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>6회</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>7회</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>8회</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>9회</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </span>
+
+      <div class="input">
+        <h4>서로 다른 네 자리 숫자를 입력하세요. (0은 제외)</h4>
+        <form id="form">
+          <input
+            class="text"
+            id="inputNumber"
+            type="text"
+            placeholder="ex) 1234"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='ex) 1234'"
+          />
+          <span class="gameButton">
+            <input class="resultButton" type="submit" value="정답입력" />
+          </span>
+          <div class="gameClear" id="gameClear" style="display: none">
+            정답입니다!
+          </div>
+        </form>
+        <button class="restartButton" onclick="restart()">재시작</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="NumberBaseball.js"></script>
